@@ -58,9 +58,9 @@ public class Puerto implements Serializable {
           return c;
       }
     }
-//public String toStringcolumna(int hub, int col){
- //       return P[hub].toStringcolumna(col);
-//}
+public String toStringcolumna(int hub, int col){
+       return P[hub].toStringcolumna(col);
+}
 
     public void desapilar(int hub, int col) {
         P[hub].desapila(col);
@@ -75,18 +75,10 @@ return P[hub].toString();
     public int ContadorPaises(String pais,int hub){
         return P[hub].calcularPais(pais);
     }
-   /* public String Puertoentero(){
-        String s="";
-        for (int i = 0; i <P.length ; i++) {
-            s+=P[i].toString();
-            s+="\n";
-        }
+ public String masPeso(int nhub, int peso){
+        return P[nhub].maspeso(peso);
+ }
 
-    */
-
-      //  return s;
-
-   // }
 }
 
 

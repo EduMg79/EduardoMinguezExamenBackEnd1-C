@@ -31,7 +31,7 @@ public class Hub implements Serializable {
 
     }
 
-   /* public String toStringcolumna(int col){
+    public String toStringcolumna(int col){
         String s="";
         for (int i = 0; i < c.length; i++) {
             if (c[i][col] == null){
@@ -43,11 +43,11 @@ public class Hub implements Serializable {
             s+="\n";
         }
         return s;
-        //SUUUUUUUUUUU
+
 
     }
 
-    */
+
 
     public void apilar(Contenedor c1) {
         if (c1 != null) {
@@ -133,6 +133,23 @@ public int calcularPais(String pais){
  return contador;
 }
 
+public String maspeso(int peso){
+        String s="";
+    for (int i = 0; i <c.length ; i++) {
+        for (int j = 0; j <c[0].length ; j++) {
+            if (c[i][j] != null && c[i][j].getPeso()>=peso){
+                c[i][j].setInspeccionado(true);
+                s+= "Id Contenedor:" +c[i][j].getNidentificador()+ "Empresa remitente:"+c[i][j].getEmpresaenvio()+" Peso:"+c[i][j].getPeso()+" Inspeccionado:"+c[i][j].isInspeccionado();
+                s+="\n";
+            }
+
+
+        }
+
+    }
+    return s;
+
+}
 
 
 
